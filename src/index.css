@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+        font-weight: 100 1000;
+        font-display: swap;
+    }
+    :root{
+      --color-primary: rgb(55, 57, 180);
+      --color-secondary: rgb(66, 68, 208);
+    }
+}
+
+:root {
+  font-family: Montserrat, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}

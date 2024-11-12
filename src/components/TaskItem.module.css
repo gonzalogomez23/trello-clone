@@ -1,0 +1,25 @@
+.task{
+    position: relative;
+    overflow: hidden;
+}
+
+.task-low::after{
+    background-color: rgb(70, 237, 115);
+}
+.task-medium::after{
+    
+    background-color: rgb(250, 230, 80);
+}
+.task-high::after{
+    
+    background-color: rgb(225, 58, 58);
+}
+
+.task::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
