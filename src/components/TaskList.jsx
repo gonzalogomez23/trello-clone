@@ -105,7 +105,7 @@ const TaskList = ({list, deleteList, renameList, newListId, unableNewListId, upd
   )
 
   return (
-    <div className={`bg-slate-800 w-80 touch-none min-w-80 rounded-xl flex flex-col gap-3 p-3 ${isDragging && 'shadow-lg z-40'}`} ref={setNodeRef} style={style}>
+    <div className={`bg-dark1-800 w-80 touch-none min-w-80 rounded-xl flex flex-col gap-3 p-3 ${isDragging && 'shadow-lg z-40'}`} ref={setNodeRef} style={style}>
       {isRenaming
         ? (<RenameListForm
             list={list}

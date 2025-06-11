@@ -33,7 +33,7 @@ const TaskItem = ({task, updateTasks, deleteTask}) => {
         <li className="max-w-full">
             <a
                 href="#"
-                className={`flex items-center justify-between bg-slate-700 hover:bg-slate-600 transition-colors rounded-lg touch-none gap-4 p-3 pe-5 ${styles.task} ${styles[`task-${task.priority}`]} ${isDragging && 'shadow-lg z-40'}`}
+                className={`flex items-center justify-between bg-dark1-700 hover:bg-dark1-600 transition-colors rounded-lg touch-none gap-4 p-3 pe-5 ${styles.task} ${styles[`task-${task.priority}`]} ${isDragging && 'shadow-lg z-40'}`}
                 onClick={() => enterEditMode(task)}  ref={setNodeRef} style={style} {...attributes} {...listeners}
             >
                 <p>{task.name}</p>

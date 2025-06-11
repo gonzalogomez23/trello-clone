@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PrimaryButton from './UI/PrimaryButton';
 
 
 const RenameListForm = ({list, renameList, toggleRenameListMode, inputRef, formRef}) => {
@@ -28,22 +29,17 @@ const RenameListForm = ({list, renameList, toggleRenameListMode, inputRef, formR
                     type="text"
                     id="addTaskName"
                     ref={inputRef}
-                    className="input p-2 rounded-lg w-full bg-gray-700 border-2 border-gray-700 focus:outline-none  focus:border-2 focus:border-primary"
+                    className="input p-2 rounded-lg w-full bg-dark1-700 border-2 border-dark1-700 focus:outline-none  focus:border-2 focus:border-primary"
                     value={updatedList.name ? updatedList.name : ''}
-                    // onInput={(e) => setTask(e.target.value)}
                     onInput={(e) => setUpdatedList({...list, name : e.target.value})}
                     required
                     autoFocus
                     maxLength={60}
                     placeholder="Enter task name"
                 />
-                <button
-                    aria-label="Add Task"
-                    type="submit"
-                    className="flex gap-2 items-center text-white bg-primary hover:bg-secondary font-medium rounded-lg text-sm px-5 py-2.5"
-                >
+                <PrimaryButton aria-label="Rename list" type="submit">
                     Save
-                </button>
+                </PrimaryButton>
             </div>
         </form>
     )

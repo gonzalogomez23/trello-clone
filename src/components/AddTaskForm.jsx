@@ -1,6 +1,7 @@
 
 import { PlusIcon } from '@heroicons/react/24/solid';
 import { useRef, useState } from 'react';
+import PrimaryButton from './UI/PrimaryButton';
 
 
 const AddTaskForm = ({addTask, addTaskFormRef}) => {
@@ -34,7 +35,7 @@ const AddTaskForm = ({addTask, addTaskFormRef}) => {
                 <input
                     type="text"
                     id="addTaskName"
-                    className="input p-2 rounded-lg w-full bg-gray-700 border-2 border-gray-700 focus:outline-none  focus:border-2 focus:border-primary"
+                    className="input p-2 rounded-lg w-full bg-dark1-700 border-2 border-dark1-700 focus:outline-none  focus:border-2 focus:border-primary"
                     value={task.name ? task.name : ''}
                     // onInput={(e) => setTask(e.target.value)}
                     onInput={(e) => setTask({...task, name : e.target.value})}
@@ -43,14 +44,12 @@ const AddTaskForm = ({addTask, addTaskFormRef}) => {
                     maxLength={60}
                     placeholder="Enter task name"
                 />
-                <button
+                <PrimaryButton
                     aria-label="Add Task"
-                    type="submit"
-                    className="flex gap-2 items-center text-white bg-primary hover:bg-secondary font-medium rounded-lg text-sm px-5 py-2.5"
-                >
+                    type="submit">
                     Add
                     <PlusIcon className="size-6 text-white" />
-                </button>
+                </PrimaryButton>
             </div>
         </form>
     )

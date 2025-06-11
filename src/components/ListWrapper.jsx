@@ -94,7 +94,7 @@ const ListWrapper = () => {
         <button
             aria-label="Add Task"
             type="submit"
-            className="flex gap-2 items-center justify-center text-white w-full border border-slate-700 hover:bg-white/5 transition-all font-medium rounded-lg text-sm px-5 py-2.5"
+            className="flex gap-2 items-center justify-center text-white w-full border border-dark1-700 hover:bg-white/5 transition-all font-medium rounded-lg text-sm px-5 py-2.5"
             onClick={handleAddList}
         >
             New list

@@ -28,7 +28,7 @@ const TaskNameGroup = ({editedTask, updateTasks}) => {
                         <input
                             type="text"
                             id="editTaskName"
-                            className="input p-2 rounded-lg w-full bg-gray-700 border-2 border-gray-700 focus:outline-none  focus:border-2 focus:border-primary"
+                            className="input p-2 rounded-lg w-full bg-dark1-700 border-2 border-dark1-700 focus:outline-none  focus:border-2 focus:border-primary"
                             value={updatedTaskName}
                             onInput={(e) => setUpdatedTaskName(e.target.value)}
                             required

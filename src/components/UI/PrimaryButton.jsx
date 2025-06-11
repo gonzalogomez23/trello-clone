@@ -1,6 +1,12 @@
-const PrimaryButton = (props) => {
+const PrimaryButton = ({ className = '', children, ...props }) => {
   return (
-    <button type="button" class="text-white bg-primary hover:bg-secondary font-medium rounded-lg text-sm px-5 py-2.5">{props.children}</button>
+    <button
+      type="button"
+      className={`rounded-lg text-white bg-primary hover:bg-secondary transition-all w-fit whitespace-nowrap flex items-center gap-2 py-2.5 px-5 ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
   )
 }
 

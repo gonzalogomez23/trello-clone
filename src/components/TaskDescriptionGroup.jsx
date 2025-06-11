@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PencilSquareIcon, CheckIcon } from "@heroicons/react/24/outline";
+import PrimaryButton from "./UI/PrimaryButton";
 
 const TaskDescriptionGroup = ({editedTask, updateTasks}) => {
     const [isEditing, setIsEditing] = useState(false)
@@ -25,7 +26,7 @@ const TaskDescriptionGroup = ({editedTask, updateTasks}) => {
                     <button
                         aria-label={`Edit task description`}
                         // type="submit"
-                        className="flex gap-2 items-center text-white border border-slate-500 hover:bg-white/5 font-medium rounded-lg text-sm px-4 py-2"
+                        className="flex gap-2 items-center text-white border border-dark1-500 hover:bg-white/5 font-medium rounded-lg text-sm px-4 py-2"
                         onClick={() => setIsEditing(true) }
                     >
                         Edit
@@ -49,7 +50,7 @@ const TaskDescriptionGroup = ({editedTask, updateTasks}) => {
                         <textarea
                             // type="text"
                             id="editTaskDescription"
-                            className="input p-2 rounded-lg w-full bg-gray-700 border-2 border-gray-700 focus:outline-none  focus:border-2 focus:border-primary"
+                            className="input p-2 rounded-lg w-full bg-dark1-700 border-2 border-dark1-700 focus:outline-none  focus:border-2 focus:border-primary"
                             value={updatedTaskDescription}
                             onInput={(e) => setUpdatedTaskDescription(e.target.value)}
                             // required
@@ -58,14 +59,12 @@ const TaskDescriptionGroup = ({editedTask, updateTasks}) => {
                             maxLength={1000}
                             placeholder="Add a description"
                         />
-                        <button
+                        <PrimaryButton
                             aria-label={`Confirm edited task to now read ${updatedTaskDescription}`}
                             type="submit"
-                            className="flex gap-2 items-center text-white bg-primary hover:bg-secondary font-medium rounded-lg text-sm px-4 py-2"
-                        >
+                            >
                             Save
-                            {/* <CheckIcon className="size-6 text-white" /> */}
-                        </button>
+                        </PrimaryButton>
                     </form>
                 )
             }

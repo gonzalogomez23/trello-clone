@@ -28,7 +28,6 @@ const DropdownMenu = ({list, deleteList, toggleRenameListMode}) => {
   return (
     <div className="relative inline-block text-left"  ref={dropdownRef}>
         <button
-            // type="submit"
             className="text-white p-2"
             aria-label={`Close add-task mode`}
             onClick={toggleMenu}
@@ -45,7 +44,7 @@ const DropdownMenu = ({list, deleteList, toggleRenameListMode}) => {
             From: "transform opacity-100 scale-100"
             To: "transform opacity-0 scale-95" */}
         {isOpen && (
-            <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-lg bg-slate-700 border border-slate-600 shadow-lg focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
+            <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-lg bg-dark1-700 border border-dark1-600 shadow-lg focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
                 <div className="p-1" role="none">
                     <a
                     className="block text-sm cursor-pointer rounded-md transition-all hover:bg-white/5 px-3 py-2"
